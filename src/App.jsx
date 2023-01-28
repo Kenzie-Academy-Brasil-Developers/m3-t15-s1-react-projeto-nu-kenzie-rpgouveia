@@ -1,11 +1,14 @@
+import { useState } from 'react'
+import { LandingPage } from './pages/LandingPage'
 import './styles/index.css'
-import Header from './components/Header'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('')
+  console.log('Current Page:', currentPage)
 
   return (
     <main>
-      <Header/>
+      <LandingPage setCurrentPage={setCurrentPage}/>
     </main>
   )
 }
