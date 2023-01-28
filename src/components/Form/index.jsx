@@ -1,16 +1,29 @@
 import { useState } from 'react'
 import styles from './style.module.css'
 
-export const Form = () => {
+export const Form = ({addValueToValueList}) => {
 
     const [formData, setFormData] = useState({
         description: '',
         value: '',
-        type: 'entrada'
+        type: 'Entrada'
     })
-
+    
     function handleSubmit(event) {
         event.preventDefault()
+        
+        if (formData.description !== '' && formData.value !== '') {
+            addValueToValueList(formData)
+        } else {
+            alert('Você precisa preencher os campos para enviar o formulário.')
+        }
+
+        // Reset Form
+        setFormData({
+            description: '',
+            value: '',
+            type: 'Entrada'
+        })
     }
 
     return (
@@ -20,6 +33,7 @@ export const Form = () => {
                 <input
                     id='description'
                     type={'text'}
+                    value={formData.description}
                     placeholder={'Digite aqui sua descrição'}
                     onChange={(event) => setFormData({...formData, description: event.target.value})}
                 />
@@ -31,6 +45,7 @@ export const Form = () => {
                     <input
                         id='value'
                         type={'number'}
+                        value={formData.value}
                         onChange={(event) => setFormData({...formData, value: event.target.value})}
                     />
                     <p>R$</p>
@@ -39,10 +54,11 @@ export const Form = () => {
                     <label className={styles.form_input_label} htmlFor='type'>Tipo de Valor</label>
                     <select
                         id='type'
+                        value={formData.type}
                         onChange={(event) => setFormData({...formData, type: event.target.value})}
                     >
-                        <option value={'entrada'}>Entrada</option>
-                        <option value={'despesa'}>Despesa</option>
+                        <option value={'Entrada'}>Entrada</option>
+                        <option value={'Despesa'}>Despesa</option>
                     </select>
                 </div>
             </div>
