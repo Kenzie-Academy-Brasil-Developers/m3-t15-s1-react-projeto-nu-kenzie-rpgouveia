@@ -1,0 +1,150 @@
+.form {
+    padding: 38px 24.5px;
+    max-width: 425px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_input_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input_1 label {
+    margin-bottom: 12px;
+}
+
+.form_input_label {
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-5);
+    line-height: 22px;
+    color: var(--color-grey-4);
+}
+
+.form_input_1 input {
+    margin-bottom: 4px;
+    padding: 13px 16px;
+
+    background-color: var(--color-grey-1);
+    border: 2px solid var(--color-grey-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+}
+
+.form_input_1 p {
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-5);
+    line-height: 20px;
+    color: var(--color-grey-3);
+}
+
+.form_input_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form_input_left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input_right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input_2 div input {
+    padding: 11px 16px;
+    
+    background-color: var(--color-grey-2);
+    border: 2px solid var(--color-grey-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+
+    position: relative;
+}
+
+.form_input_2 div p {
+    position: absolute;
+    top: 292px;
+    left: 110px;
+}
+
+.form_input_2 div label {
+    margin-bottom: 9px;
+}
+
+.form_input_2 div select {
+    padding: 11px 16px;
+
+    background-color: var(--color-grey-2);
+    border: 2px solid var(--color-grey-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+}
+
+.form_button {
+    height: 48px;
+    padding: 14.5px 20px;
+
+    background-color: var(--color-primary-1);
+    border: 2px solid var(--color-primary-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-4);
+    font-size: var(--font-size-3);
+    line-height: 19px;
+    color: var(--color-white);
+
+    cursor: pointer;
+}
+
+@media(min-width: 321px) {
+    .form_input_2 div p {
+        left: 135px;
+    }
+}
+
+@media(min-width: 424px) {
+    .form_input_2 div p {
+        left: 155px;
+    }
+}
+
+@media(min-width: 426px) {
+    .form_input_2 div p {
+        top: 310px;
+        left: 175px;
+    }
+}
+
+@media(min-width: 767px) {
+    .form_input_2 div p {
+        left: 155px;
+    }
+}
