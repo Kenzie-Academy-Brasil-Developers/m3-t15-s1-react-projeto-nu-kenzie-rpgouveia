@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { LandingPage } from './pages/LandingPage'
+import { ApplicationPage } from './pages/ApplicationPage'
 import './styles/index.css'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('')
-  console.log('Current Page:', currentPage)
 
   return (
     <main>
-      <LandingPage setCurrentPage={setCurrentPage}/>
+      {currentPage === '' && <LandingPage setCurrentPage={setCurrentPage}/>}
+      {currentPage === 'application_page' && <ApplicationPage setCurrentPage={setCurrentPage}/>}
     </main>
   )
 }

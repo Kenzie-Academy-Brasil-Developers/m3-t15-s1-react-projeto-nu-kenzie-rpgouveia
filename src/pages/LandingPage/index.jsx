@@ -1,6 +1,6 @@
 import styles from './style.module.css'
 
-export function LandingPage({ setCurrentPage }) {
+export function LandingPage({setCurrentPage}) {
     return (
         <section className={styles.landingpage}>
             <div className={styles.container}>
