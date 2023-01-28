@@ -1,10 +1,18 @@
 .title {
     font-family: var(--font-family-1);
-    font-weight: var(--font-weight-2); /* 700 */
 }
 
 .title.one {
     font-size: var(--font-size-1); /* 38px */
+    line-height: 3rem; /* 48px */
+}
+
+.title.one.extraBold {
+    font-weight: var(--font-weight-1); /* 800 */
+}
+
+.title.one.extraBold.white{
+    color: var(--color-white);
 }
 
 .title.two {
@@ -23,6 +31,11 @@
     font-family: var(--font-family-1);
     font-weight: var(--font-weight-5); /* 400 */
     font-size: var(--font-size-3);
+    line-height: 1.625rem; /* 26px */
+}
+
+.headline.white {
+    color: var(--color-white);
 }
 
 .text {
