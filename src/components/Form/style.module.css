@@ -1,6 +1,11 @@
 .form {
+    margin-top: 24px;
     padding: 38px 24.5px;
     max-width: 425px;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-2);
+    border-radius: 4px;
 
     display: flex;
     flex-direction: column;
@@ -39,6 +44,10 @@
     color: var(--color-grey-3);
 }
 
+.form_input_1 input :hover {
+    outline: var(--color-grey-4);
+}
+
 .form_input_1 p {
     font-family: var(--font-family-2);
     font-weight: var(--font-weight-5);
@@ -62,15 +71,15 @@
 }
 
 .form_input_right {
-    width: 45%;
+    width: 49%;
     display: flex;
     flex-direction: column;
 }
 
-.form_input_2 div input {
+.form_input_number {
     padding: 11px 16px;
     
-    background-color: var(--color-grey-2);
+    background-color: var(--color-grey-1);
     border: 2px solid var(--color-grey-1);
     border-radius: 8px;
 
@@ -83,9 +92,25 @@
     position: relative;
 }
 
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+.form_input_number::-webkit-outer-spin-button,
+.form_input_number::-webkit-inner-spin-button{
+    appearance: none;
+    margin: 0;
+}
+.form_input_number[type=number]{
+    -moz-appearance: textfield;
+}
+
 .form_input_2 div p {
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+
     position: absolute;
-    top: 292px;
+    top: 285px;
     left: 110px;
 }
 
@@ -93,10 +118,10 @@
     margin-bottom: 9px;
 }
 
-.form_input_2 div select {
+.form_input_select {
     padding: 11px 16px;
 
-    background-color: var(--color-grey-2);
+    background-color: var(--color-grey-1);
     border: 2px solid var(--color-grey-1);
     border-radius: 8px;
 
@@ -124,6 +149,11 @@
     cursor: pointer;
 }
 
+.form_button:hover {
+    background-color: var(--color-primary-2);
+    border: 2px solid var(--color-primary-2);
+}
+
 @media(min-width: 321px) {
     .form_input_2 div p {
         left: 135px;
@@ -145,11 +175,15 @@
 
 @media(min-width: 767px) {
     .form_input_2 div p {
-        left: 330px;
+        top: 304px;
+        left: 325px;
     }
 }
 
 @media(min-width: 1023px) {
+    .form {
+        margin-top: 39px;
+    }
     .form_input_2 div p {
         left: 255px;
     }
@@ -157,12 +191,18 @@
 
 @media(min-width: 1439px) {
     .form_input_2 div p {
-        left: 370px;
+        left: 400px;
     }
 }
 
 @media(min-width: 1919px) {
     .form_input_2 div p {
         left: 480px;
+    }
+}
+
+@media(min-width: 2559px) {
+    .form_input_2 div p {
+        left: 600px;
     }
 }

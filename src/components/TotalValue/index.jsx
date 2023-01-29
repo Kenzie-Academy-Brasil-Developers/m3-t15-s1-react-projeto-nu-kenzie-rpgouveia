@@ -1,9 +1,9 @@
 import styles from './style.module.css'
 
-export const TotalValue = ({valueList}) => {
+export const TotalValue = ({filteredList}) => {
     let myTotalValue = 0
 
-    valueList.map(value => {
+    filteredList.map(value => {
         if (value.type == 'Entrada') {
             return myTotalValue += value.value
         } else {
