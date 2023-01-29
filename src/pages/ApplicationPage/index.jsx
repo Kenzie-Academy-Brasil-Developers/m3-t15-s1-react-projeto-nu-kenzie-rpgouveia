@@ -27,15 +27,17 @@ export function ApplicationPage({setCurrentPage}) {
     return (
         <>
             <Header setCurrentPage={setCurrentPage}/>
-            <section>
-                <section>
-                    <Form addValueToValueList={addValueToValueList}/>
-                    <></>
+            <div className={styles.container}>
+                <section className={styles.section_flex}>
+                    <section>
+                        <Form addValueToValueList={addValueToValueList}/>
+                        <></>
+                    </section>
+                    <>
+                        <ValueList valueList={valueList} removeValueFromValueList={removeValueFromValueList}/>
+                    </>
                 </section>
-                <aside>
-                    <ValueList valueList={valueList} removeValueFromValueList={removeValueFromValueList}/>
-                </aside>
-            </section>
+            </div>
         </>
     )
 }

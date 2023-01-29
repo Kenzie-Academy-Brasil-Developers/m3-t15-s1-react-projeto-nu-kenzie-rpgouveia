@@ -145,6 +145,24 @@
 
 @media(min-width: 767px) {
     .form_input_2 div p {
-        left: 155px;
+        left: 330px;
+    }
+}
+
+@media(min-width: 1023px) {
+    .form_input_2 div p {
+        left: 255px;
+    }
+}
+
+@media(min-width: 1439px) {
+    .form_input_2 div p {
+        left: 370px;
+    }
+}
+
+@media(min-width: 1919px) {
+    .form_input_2 div p {
+        left: 480px;
     }
 }
