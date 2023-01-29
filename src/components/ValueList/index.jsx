@@ -1,9 +1,12 @@
+import styles from './style.module.css'
+import { ValueCard } from './ValueCard'
+
 export const ValueList = ({valueList, removeValueFromValueList}) => {
 
     return (
-        <section>
-            <h3 className="title three bold grey">Resumo financeiro</h3>
-            <ul>
+        <aside className={styles.aside}>
+            <h3 className='title three bold grey'>Resumo financeiro</h3>
+            <ul className={styles.ul}>
                 {
                     valueList.length == 0 ? (
                         <li>
@@ -12,19 +15,12 @@ export const ValueList = ({valueList, removeValueFromValueList}) => {
                     ) : (
                         valueList.map((value) => {
                             return (
-                                <li key={value.id}>
-                                    <p>{value.description}</p>
-                                    <p>{value.type}</p>
-                                    <p>{value.value}</p>
-                                    <button type="submit" onClick={() => removeValueFromValueList(value.id)}>Remover</button>
-                                </li>
+                                <ValueCard value={value} removeValueFromValueList={removeValueFromValueList}/>
                             )
                         })
-                        
-                        
                     )
                 }
             </ul>
-        </section>
+        </aside>
     )
 }
