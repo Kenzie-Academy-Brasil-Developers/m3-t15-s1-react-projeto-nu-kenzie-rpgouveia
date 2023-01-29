@@ -1,0 +1,205 @@
+.form {
+    margin-top: 24px;
+    padding: 38px 24.5px;
+    max-width: 425px;
+
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey-2);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form_input_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input_1 label {
+    margin-bottom: 12px;
+}
+
+.form_input_label {
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-5);
+    line-height: 22px;
+    color: var(--color-grey-4);
+}
+
+.form_input_1 input {
+    margin-bottom: 4px;
+    padding: 13px 16px;
+
+    background-color: var(--color-grey-1);
+    border: 2px solid var(--color-grey-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+}
+
+.form_input_1 p {
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-5);
+    line-height: 20px;
+    color: var(--color-grey-3);
+}
+
+.form_input_2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form_input_left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input_right {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input_number {
+    padding: 11px 16px;
+    
+    background-color: var(--color-grey-1);
+    border: 2px solid var(--color-grey-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+
+    position: relative;
+}
+
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+.form_input_number::-webkit-outer-spin-button,
+.form_input_number::-webkit-inner-spin-button{
+    appearance: none;
+    margin: 0;
+}
+.form_input_number[type=number]{
+    appearance: textfield;
+}
+
+.form_input_2 div p {
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+
+    position: absolute;
+    top: 310px;
+    left: 110px;
+}
+
+.form_input_2 div label {
+    margin-bottom: 9px;
+}
+
+.form_input_select {
+    padding: 11px 16px;
+
+    background-color: var(--color-grey-1);
+    border: 2px solid var(--color-grey-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-3);
+    line-height: 26px;
+    color: var(--color-grey-3);
+}
+
+.form_button {
+    height: 48px;
+    padding: 14.5px 20px;
+
+    background-color: var(--color-primary-1);
+    border: 2px solid var(--color-primary-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-4);
+    font-size: var(--font-size-3);
+    line-height: 19px;
+    color: var(--color-white);
+
+    cursor: pointer;
+}
+
+.form_button:hover {
+    background-color: var(--color-primary-2);
+    border: 2px solid var(--color-primary-2);
+}
+
+@media(min-width: 321px) {
+    .form_input_2 div p {
+        left: 135px;
+    }
+}
+
+@media(min-width: 424px) {
+    .form_input_2 div p {
+        left: 155px;
+    }
+}
+
+@media(min-width: 426px) {
+    .form_input_2 div p {
+        top: 310px;
+        left: 175px;
+    }
+}
+
+@media(min-width: 767px) {
+    .form_input_2 div p {
+        top: 329px;
+        left: 325px;
+    }
+}
+
+@media(min-width: 1023px) {
+    .form {
+        margin-top: 39px;
+    }
+    .form_input_2 div p {
+        top: 344px;
+        left: 255px;
+    }
+}
+
+@media(min-width: 1439px) {
+    .form_input_2 div p {
+        left: 400px;
+    }
+}
+
+@media(min-width: 1919px) {
+    .form_input_2 div p {
+        left: 480px;
+    }
+}
+
+@media(min-width: 2559px) {
+    .form_input_2 div p {
+        left: 600px;
+    }
+}

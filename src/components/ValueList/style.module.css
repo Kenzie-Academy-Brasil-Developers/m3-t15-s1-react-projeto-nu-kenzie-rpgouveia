@@ -1,0 +1,74 @@
+.aside {
+    padding: 20px 15px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter_section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter_options {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.filter_btn {
+    height: 48px;
+    width: fit-content;
+    padding: 13.5px 10px;
+
+    background-color: var(--color-primary-1);
+    border: 2px solid var(--color-primary-1);
+    border-radius: 8px;
+
+    font-family: var(--font-family-2);
+    font-weight: var(--font-weight-4);
+    font-size: var(--font-size-3);
+    line-height: 19px;
+    color: var(--color-white);
+
+    cursor: pointer;
+}
+
+.filter_btn:hover {
+    background-color: var(--color-primary-2);
+    border: 2px solid var(--color-primary-2);
+}
+
+@media(min-width: 767px) {
+    .aside {
+        width: 100%;
+    }
+    .filter_section {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: unset;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 1023px) {
+    .aside {
+        margin-top: 19px;
+    }
+}
+
+@media(min-width: 1439px) {
+    .aside {
+        width: 560px;
+    }
+}

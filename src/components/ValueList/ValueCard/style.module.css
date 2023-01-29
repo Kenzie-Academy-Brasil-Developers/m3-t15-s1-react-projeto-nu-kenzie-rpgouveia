@@ -1,0 +1,106 @@
+.value_card {
+    max-width: 560px;
+    
+    background-color: var(--color-grey-1);
+    border: 1px solid var(--color-grey-1);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.value_card:hover {
+    background-color: var(--color-grey-2);
+    border: 1px solid var(--color-grey-2);
+}
+
+.value_card_income {
+    width: 4px;
+    background-color: var(--color-secondary);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.value_card_expense {
+    width: 4px;
+    background-color: var(--color-red);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.value_card_frame {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.value_card_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.value_card_flex {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.value_card_remove_btn {
+    height: 22px;
+    width: 22px;
+    object-fit: cover;
+    background-color: var(--color-grey-2);
+    background-image: url(../../../assets/trash_1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 2.5px;
+    border: none;
+    cursor: pointer;
+}
+
+.value_card_remove_btn:hover{
+    background-color: var(--color-grey-5);
+    background-image: url(../../../assets/trash_2.png);
+}
+
+.value_card_title {
+    font-family: var(--font-family-1);
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    line-height: 30px;
+    color: var(--color-grey-4);
+}
+
+.value_card_text {
+    font-family: var(--font-family-1);
+    font-weight: var(--font-weight-5);
+    font-size: var(--font-size-5);
+    line-height: 30px;
+    color: var(--color-grey-5);
+}
+
+@media (min-width: 767px) {
+    .value_card {
+        width: 560px;
+    }
+    .value_card_frame {
+        gap: unset;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .value_card_flex {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media(min-width: 1023px) {
+    .value_card {
+        width: 100%;
+    }
+}

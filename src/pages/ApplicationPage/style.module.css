@@ -1,0 +1,39 @@
+.container {
+    width: 92%;
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.section_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 767px) {
+    .container {
+        width: 80.75%;
+    }
+    .section_flex {
+        align-items: center;
+    }
+}
+
+@media (min-width: 1023px) {
+    .section_flex {
+        flex-direction: row;
+        align-items: unset;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1439px) {
+    .container {
+        width: 65.2%;
+    }
+    .section_flex {
+        flex-direction: row;
+        align-items: unset;
+        justify-content: space-between;
+    }
+}
