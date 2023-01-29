@@ -9,8 +9,13 @@ import { TotalValue } from '../../components/TotalValue'
 export function ApplicationPage({setCurrentPage}) {
 
     const [valueList, setValueList] = useState([])
+    const [filter, setFilter] = useState('')
     
     // Callbacks
+    const filteredList = valueList.filter(value => {
+        return filter == '' ? true : value.type == filter
+    })
+
     function addValueToValueList(formData) {
         const newValue = {...formData, id: uuid()}
         setValueList([...valueList, newValue])
@@ -18,10 +23,10 @@ export function ApplicationPage({setCurrentPage}) {
 
     function removeValueFromValueList(valueToBeRemoved) {
         if (confirm('Você realmente deseja remover este valor?')) {
-            const filteredValuesList = valueList.filter((value) => {
+            const updatedValuesList = valueList.filter((value) => {
                 return value.id !== valueToBeRemoved
             })
-            setValueList([...filteredValuesList])
+            setValueList([...updatedValuesList])
         }
     }
 
@@ -32,10 +37,10 @@ export function ApplicationPage({setCurrentPage}) {
                 <section className={styles.section_flex}>
                     <section>
                         <Form addValueToValueList={addValueToValueList}/>
-                        <TotalValue valueList={valueList}/>
+                        <TotalValue filteredList={filteredList}/>
                     </section>
                     <>
-                        <ValueList valueList={valueList} removeValueFromValueList={removeValueFromValueList}/>
+                        <ValueList filteredList={filteredList} removeValueFromValueList={removeValueFromValueList} setFilter={setFilter}/>
                     </>
                 </section>
             </div>

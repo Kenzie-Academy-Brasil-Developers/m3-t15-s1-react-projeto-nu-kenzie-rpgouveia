@@ -41,6 +41,12 @@
     cursor: pointer;
 }
 
+.header_btn:hover {
+    background-color: var(--color-grey-5);
+    border: 1.4px solid var(--color-grey-5);
+    color: var(--color-grey-1);
+}
+
 @media(min-width: 426px) {
     .container {
         width: 80.75%;

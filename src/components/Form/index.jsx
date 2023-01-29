@@ -47,6 +47,7 @@ export const Form = ({addValueToValueList}) => {
                         type={'number'}
                         value={formData.value}
                         onChange={(event) => setFormData({...formData, value: Number(event.target.value)})}
+                        className={styles.form_input_number}
                     />
                     <p>R$</p>
                 </div>
@@ -56,6 +57,7 @@ export const Form = ({addValueToValueList}) => {
                         id='type'
                         value={formData.type}
                         onChange={(event) => setFormData({...formData, type: event.target.value})}
+                        className={styles.form_input_select}
                     >
                         <option value={'Entrada'}>Entrada</option>
                         <option value={'Despesa'}>Despesa</option>
