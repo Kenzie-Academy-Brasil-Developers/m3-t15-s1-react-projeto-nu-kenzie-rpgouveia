@@ -46,7 +46,7 @@ export const Form = ({addValueToValueList}) => {
                         id='value'
                         type={'number'}
                         value={formData.value}
-                        onChange={(event) => setFormData({...formData, value: event.target.value})}
+                        onChange={(event) => setFormData({...formData, value: Number(event.target.value)})}
                     />
                     <p>R$</p>
                 </div>
