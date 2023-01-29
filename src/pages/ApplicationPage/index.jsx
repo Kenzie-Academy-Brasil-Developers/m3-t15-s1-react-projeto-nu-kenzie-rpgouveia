@@ -28,11 +28,13 @@ export function ApplicationPage({setCurrentPage}) {
         <>
             <Header setCurrentPage={setCurrentPage}/>
             <section>
-                <div>
+                <section>
                     <Form addValueToValueList={addValueToValueList}/>
                     <></>
-                </div>
-                <ValueList valueList={valueList} removeValueFromValueList={removeValueFromValueList}/>
+                </section>
+                <aside>
+                    <ValueList valueList={valueList} removeValueFromValueList={removeValueFromValueList}/>
+                </aside>
             </section>
         </>
     )

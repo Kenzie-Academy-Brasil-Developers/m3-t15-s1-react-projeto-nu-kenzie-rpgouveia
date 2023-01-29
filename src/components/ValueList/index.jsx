@@ -1,7 +1,9 @@
+import styles from './style.module.css'
+
 export const ValueList = ({valueList, removeValueFromValueList}) => {
 
     return (
-        <section>
+        <>
             <h3 className="title three bold grey">Resumo financeiro</h3>
             <ul>
                 {
@@ -11,20 +13,53 @@ export const ValueList = ({valueList, removeValueFromValueList}) => {
                         </li>
                     ) : (
                         valueList.map((value) => {
-                            return (
-                                <li key={value.id}>
-                                    <p>{value.description}</p>
-                                    <p>{value.type}</p>
-                                    <p>{value.value}</p>
-                                    <button type="submit" onClick={() => removeValueFromValueList(value.id)}>Remover</button>
-                                </li>
-                            )
+                            if (value.type == 'Entrada') {
+                                return (
+                                    <li key={value.id} className={styles.value_card}>
+                                        <div className={styles.value_card_income} />
+                                        <div className={styles.value_card_frame}>
+                                            <div className={styles.value_card_info}>
+                                                <h3 className={styles.value_card_title}>{value.description}</h3>
+                                                <p className={styles.value_card_text}>{value.type}</p>
+                                            </div>
+                                            <div className={styles.value_card_flex}>
+                                                <p className={styles.value_card_text}>R$ {value.value},00</p>
+                                                <button
+                                                    type="submit"
+                                                    onClick={() => removeValueFromValueList(value.id)}
+                                                    className={styles.value_card_remove_btn}
+                                                />
+                                            </div>
+                                        </div>
+                                    </li>
+                                )
+                            } else {
+                                return (
+                                    <li key={value.id} className={styles.value_card}>
+                                        <div className={styles.value_card_expense} />
+                                        <div className={styles.value_card_frame}>
+                                            <div className={styles.value_card_info}>
+                                                <h3 className={styles.value_card_title}>{value.description}</h3>
+                                                <p className={styles.value_card_text}>{value.type}</p>
+                                            </div>
+                                            <div className={styles.value_card_flex}>
+                                                <p className={styles.value_card_text}>R$ {value.value},00</p>
+                                                <button
+                                                    type="submit"
+                                                    onClick={() => removeValueFromValueList(value.id)}
+                                                    className={styles.value_card_remove_btn}
+                                                />
+                                            </div>
+                                        </div>
+                                    </li>
+                                )
+                            }
                         })
                         
                         
                     )
                 }
             </ul>
-        </section>
+        </>
     )
 }
