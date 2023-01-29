@@ -81,3 +81,17 @@
         width: 560px;
     }
 }
+
+@media(min-width: 1023px) {
+    .value_card {
+        width: unset;
+        min-width: 380px;
+    }
+}
+
+@media(min-width: 1439px) {
+    .value_card {
+        width: 500px;
+        min-width: unset;
+    }
+}
