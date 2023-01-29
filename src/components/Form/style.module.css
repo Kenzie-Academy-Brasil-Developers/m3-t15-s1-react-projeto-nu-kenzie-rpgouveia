@@ -95,7 +95,7 @@
     margin: 0;
 }
 .form_input_number[type=number]{
-    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 .form_input_2 div p {
