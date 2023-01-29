@@ -4,6 +4,7 @@ import styles from './style.module.css'
 import Header from '../../components/Header'
 import { Form } from '../../components/Form'
 import { ValueList } from '../../components/ValueList'
+import { TotalValue } from '../../components/TotalValue'
 
 export function ApplicationPage({setCurrentPage}) {
 
@@ -31,7 +32,7 @@ export function ApplicationPage({setCurrentPage}) {
                 <section className={styles.section_flex}>
                     <section>
                         <Form addValueToValueList={addValueToValueList}/>
-                        <></>
+                        <TotalValue valueList={valueList}/>
                     </section>
                     <>
                         <ValueList valueList={valueList} removeValueFromValueList={removeValueFromValueList}/>
