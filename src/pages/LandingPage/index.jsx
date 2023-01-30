@@ -1,6 +1,6 @@
 import styles from './style.module.css'
-import NuKenzieLP from '././src/assets/NuKenzieLP.svg'
-import illustration from '././src/assets/Illustration_desktop.png'
+import NuKenzieLP from '/src/assets/NuKenzieLP.svg'
+import illustration from '/src/assets/Illustration_desktop.png'
 
 export function LandingPage({setCurrentPage}) {
     return (
